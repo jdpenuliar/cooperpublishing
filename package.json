@@ -1,0 +1,25 @@
+{
+  "name": "cooperpublishing",
+  "version": "0.0.1",
+  "description": "Website for cooper publishing by DSolutions/JDPenuliar",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdpenuliar/cooperpublishing.git"
+  },
+  "author": "JDPenuliar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jdpenuliar/cooperpublishing/issues"
+  },
+  "homepage": "https://github.com/jdpenuliar/cooperpublishing#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.1"
+  }
+}

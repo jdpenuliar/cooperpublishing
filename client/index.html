@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="cooperPublishing">
+<head>
+	<base href="/">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<title>Cooper Publishing</title>
+
+	<!-- Materialize CSS -->
+    <link type="text/css" rel="stylesheet" href="./css/materialize.css">
+
+    <!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <!-- ANGULAR -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
+	
+	
+    <script>
+    (function(){
+    	var cooperPublishingAppModule = angular.module("cooperPublishing",["ngRoute","ngMessages","ui.materialize"]);
+
+		cooperPublishingAppModule.config(function($routeProvider,$locationProvider){
+			if(window.history && window.history.pushState){
+				$locationProvider.html5Mode(true);
+			}
+			$routeProvider
+			.when("/",{
+				templateUrl: "partials/landing.html"
+			})
+			.when("/x",{
+				templateUrl: "partials/qwer.html"
+			})
+			.otherwise({
+				redirectTo: "/"
+			});
+
+
+		});
+		
+
+    	cooperPublishingAppModule.controller("LandingController",function($scope){
+    		$scope.pythonImage = "/images/python001.png"
+    		console.log($scope.pythonImage);
+    	});
+    })();
+    	
+    </script>
+
+</head>
+<body>
+	<div ng-view="">
+		
+	</div>
+	
+
+</body>
+
+
+</body>
+</html>
